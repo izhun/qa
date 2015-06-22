@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Q&A - регистрация{% endblock %}
+{% block page_content %}
+    <div class="page-header">
+        <h1>Регистрация!</h1>
+    </div>
+    {{ wtf.quick_form(form, action="/register") }}
+    {{ form.hidden_tag() }}
+{% endblock %}

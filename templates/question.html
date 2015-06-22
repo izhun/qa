@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Q&A{% endblock %}
+{% block page_content %}
+    {% if question %}
+        <ul>
+                <li>{{ question.q_text }}</li>
+        </ul>
+
+    {% endif %}
+    <ol>
+        {% for answer in answers %}
+            <li>{{ answer.answer_text }}</li>
+        {% endfor %}
+    </ol>
+    {% if current_user.is_authenticated() %}
+        {{ wtf.quick_form(form) }}
+        {{ form.hidden_tag() }}
+    {% else %}
+        <p><strong>Только зарегестрированные пользователи могут отвечать на вопросы.</strong></p>
+    {% endif %}
+
+
+{% endblock %}

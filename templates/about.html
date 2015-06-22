@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Q&A - залогиниться{% endblock %}
+{% block page_content %}
+    <div>
+        <h3>Author: igor.zhun@gmail.com</h3>
+    </div>
+    <div>
+        <h2>Цель тестового задания</h2>
+        <h4>Определить возможную динамику самообучения кандидата. А так же глубину понимания кода, реализующего тестовое задание.</h4>
+        <h2>Задание</h2>
+        <h4>Написать тестовое web-приложение вопросов/ответов:</h4>
+        <ol>
+            <li>Сущности
+                <ol>
+                    <li>Пользователь</li>
+                    <li>Вопрос</li>
+                    <li>Ответ</li>
+                </ol>
+            </li>
+            <li>Функционал доступен как анонимный так и зарегистрированным пользователям
+                <ol>
+                    <li>Просмотр списка вопросов</li>
+                    <li>Просмотр ответов на вопрос</li>
+                    <li>Регистрация</li>
+                </ol>
+            </li>
+            <li>Функционал доступен только зарегистрированным пользователям
+                <ol>
+                    <li>Задать вопрос</li>
+                    <li>Ответить на вопрос</li>
+                    <li>Проголосовать за ответ</li>
+                </ol>
+            </li>
+            <li>Технологии, которые должны быть задействованы:
+                <ol>
+                    <li>Flask</li>
+                    <li>SQLAlchemy</li>
+                    <li>Jinja2 Templates</li>
+                    <li>WTForms</li>
+                    <li>Flask-Login</li>
+                    <li>Bootstrap</li>
+                </ol>
+            </li>
+        </ol>
+
+        <h4>Список может быть расширен по усмотрению кандидата, но с обязательным использованием технологий, перечисленных выше.</h4>
+        <h2>Дополнительные требования</h2>
+        <h4>Список дополнительных требований следующий:</h4>
+        <ol>
+            <li>Код проекта должен быть доступен на сервисе <a href="http://github.org">http://github.org</a> или <a href="http://bitbucket.org">http://bitbucket.org</a>.</li>
+            <li>Проект должен быть доступен онлайн, желательно на  <a href="https://www.heroku.com/">https://www.heroku.com/</a> или <a href="https://www.pythonanywhere.com/">https://www.pythonanywhere.com/</a>.</li>
+        </ol>
+
+        <h2>Дополнительные знания</h2>
+        <h4>Дополнительные знания, необходимые при защите проекта:</h4>
+        <ol>
+            <li>HTTP
+            <li>WSGI
+            <li>SQL, Transactions, Transaction Isolation Levels
+            <li>SQLAlchemy
+            <li>Уязвимости веб-сайтов
+        </ol>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Q&A{% endblock %}
+{% block page_content %}
+    {% if questions %}
+        <ul class="posts">
+            {% for question in questions %}
+                <li class="post">
+                    <div class="post-author">
+                        {{ question.author.username }}
+                    </div>
+                    <div class="post-body">
+                        <a href="/q/{{ question.id }}"> {{ question.q_text }} </a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
